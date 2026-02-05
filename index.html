@@ -14,6 +14,7 @@
       font-family: 'Poppins', sans-serif;
       background: #0e0e0e;
       color: #ffffff;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -67,17 +68,42 @@
       background: #1c1c1c;
       padding: 20px;
       border-radius: 12px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255,60,0,0.5);
+    }
+
+    .card a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      color: #ff3c00;
     }
 
     .work {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,60,0,0.6);
     }
 
     footer {
@@ -119,14 +145,33 @@
 <!-- SERVICES -->
 <section>
   <h2>Services</h2>
+
   <div class="services">
-    <a href="#wedding-edits">Wedding Edits</a>
-    <div class="card">Wedding Invitation Cards (Digital & Video)</div>
-    <div class="card">Instagram Reels Editing</div>
-    <div class="card">YouTube Shorts Editing</div>
-    <div class="card">Custom AI Images</div>
-    <div class="card">AI Video Creation</div>
+
+    <div class="card">
+      <a href="#wedding-invitation">
+        Wedding Invitation Cards (Digital & Video)
+      </a>
+    </div>
+
+    <div class="card">
+      Instagram Reels Editing
+    </div>
+
+    <div class="card">
+      YouTube Shorts Editing
+    </div>
+
+    <div class="card">
+      Custom AI Images
+    </div>
+
+    <div class="card">
+      AI Video Creation
+    </div>
+
   </div>
+
 </section>
 
 <!-- WORK -->
@@ -151,15 +196,35 @@
     </blockquote>
 
   </div>
+
+</section>
+
+<!-- WEDDING INVITATION SECTION (CLICK TARGET) -->
+<section id="wedding-invitation">
+
+  <h2>Wedding Invitation Cards</h2>
+
+  <div class="gallery">
+
+    <a href="assets/images/IMG-20260205-WA0002.jpg" target="_blank">
+      <img src="assets/images/IMG-20260205-WA0002.jpg" alt="Wedding Invitation Card">
+    </a>
+
+  </div>
+
 </section>
 
 <!-- CONTACT -->
 <section>
   <h2>Contact</h2>
+
   <div class="contact">
+
     <div class="card">
       📞 WhatsApp<br>
-      <a href="https://wa.me/918080674348">+91 80806 74348</a>
+      <a href="https://wa.me/918080674348">
+        +91 80806 74348
+      </a>
     </div>
 
     <div class="card">
@@ -171,11 +236,13 @@
 
     <div class="card">
       📸 Instagram<br>
-      <a href="https://www.instagram.com/editerai__?igsh=MWpveHgyMWg2NDJldQ==" target="_blank">
+      <a href="https://www.instagram.com/editerai__" target="_blank">
         @editerai__
       </a>
     </div>
+
   </div>
+
 </section>
 
 <!-- FOOTER -->
@@ -183,15 +250,8 @@
   © 2026 Shadow Editor. All Rights Reserved.
 </footer>
 
-<!-- Instagram Embed Script (REQUIRED) -->
+<!-- Instagram Script -->
 <script async src="https://www.instagram.com/embed.js"></script>
 
-<section>
-  <h2>My Wedding Edits</h2>
-
-  <img src="assets/images/IMG-20260205-WA0002.jpg" alt="Wedding Edit" width="300">
-
-</section>
-  
 </body>
 </html>
